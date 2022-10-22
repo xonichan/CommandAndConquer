@@ -8,14 +8,12 @@ import javax.persistence.Table;
 @Table(name = "CnCTable")
 public class CnCEntity {
 
-    private long id;
+    private String id;
 
-    public void  setId(Long id) {
-        this.id = id;
-    }
+    private String name;
 
     @Id
-    public long getId() {
+    public String getId() {
         return id;
     }
 
@@ -27,5 +25,7 @@ public class CnCEntity {
         this.name = name;
     }
 
-    private String name;
+    public void  setId(String id) {
+        this.id = id;
+    }
 }

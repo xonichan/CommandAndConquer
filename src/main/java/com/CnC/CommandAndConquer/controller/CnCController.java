@@ -21,8 +21,12 @@ public class CnCController {
 
     @GetMapping("/Save")
     public String seveName() {
-        cnCService.saveEntity();
-        return "ok";
+        cnCService.saveEntity("Moscow");
+        return "ok\n";
     }
 
+    @GetMapping("/Test")
+    public String testName() {
+        return "Test complete\n";
+    }
 }

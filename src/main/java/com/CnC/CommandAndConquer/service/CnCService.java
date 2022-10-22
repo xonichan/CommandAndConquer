@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class CnCService {
@@ -16,11 +17,16 @@ public class CnCService {
         return CncRepositiry.findByName("Moscow");
     }
 
-    public void saveEntity() {
+    public void saveEntity(String cityName) {
+        UUID uuid = UUID.randomUUID();
         var entity = new CnCEntity();
-        entity.setId(1L);
-        entity.setName("Moscow");
-
+        entity.setId(uuid.toString());
+        entity.setName(cityName);
         CncRepositiry.save(entity);
     }
+
+    public List<CnCEntity> getById(String ID) {
+        return CncRepositiry.findByName(ID);
+    }
+
 }
