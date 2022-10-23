@@ -13,8 +13,8 @@ public class CnCService {
 
     @Autowired
     CncRepositiry CncRepositiry;
-    public List<CnCEntity> getValueFromTable() {
-        return CncRepositiry.findByName("Moscow");
+    public List<CnCEntity> findByNameCity(String cityName) {
+        return CncRepositiry.findByName(cityName);
     }
 
     public void saveEntity(String cityName) {
