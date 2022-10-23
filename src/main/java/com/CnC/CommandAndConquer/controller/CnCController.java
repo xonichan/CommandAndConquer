@@ -17,19 +17,19 @@ public class CnCController {
     @Autowired
     CnCService cnCService;
 
-    @RequestMapping(value="GetAllCitys", method = RequestMethod.GET)
-    public List<CnCEntity> getItem(@RequestParam("cityName") String cityName){
+    @RequestMapping(value="GetCity", method = RequestMethod.GET)
+    public List<CnCEntity> getItem(@RequestParam("cityName") @NotNull String cityName){
         return cnCService.findByNameCity(cityName);
     }
 
     @GetMapping("/Save")
-    public String seveName() {
+    public String saveName() {
         cnCService.saveEntity("Moscow");
         return "ok\n";
     }
 
     @RequestMapping(value="SaveCityName", method = RequestMethod.GET)
-    public String setСityName(@RequestParam("cityName") String cityName){
+    public String saveCityName(@RequestParam("cityName") @NotNull String cityName){
         cnCService.saveEntity(cityName);
     return "Add city "+cityName;
     }
