@@ -11,6 +11,4 @@ public interface CncRepositiry extends CrudRepository<CnCEntity, String> {
 
     public  List<CnCEntity> findByName(String name);
 
-//    public  List<CnCEntity> findById(String id);
-
 }
