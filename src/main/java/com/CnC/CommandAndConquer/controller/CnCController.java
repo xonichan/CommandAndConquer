@@ -1,4 +1,5 @@
 package com.CnC.CommandAndConquer.controller;
+
 import com.CnC.CommandAndConquer.CommandAndConquerApplication;
 import com.CnC.CommandAndConquer.entiry.CnCEntity;
 import com.CnC.CommandAndConquer.service.CnCService;
