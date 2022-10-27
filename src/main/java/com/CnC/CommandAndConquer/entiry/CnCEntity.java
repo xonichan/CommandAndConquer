@@ -1,9 +1,9 @@
 package com.CnC.CommandAndConquer.entiry;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@SuppressWarnings("unused")
 @Entity
 @Table(name = "CnCTable")
 public class CnCEntity {

@@ -1,5 +1,4 @@
 package com.CnC.CommandAndConquer.controller;
-
 import com.CnC.CommandAndConquer.CommandAndConquerApplication;
 import com.CnC.CommandAndConquer.entiry.CnCEntity;
 import com.CnC.CommandAndConquer.service.CnCService;
@@ -12,14 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 @SuppressWarnings("unused")
 @RestController
 public class CnCController {
     static final Logger logger = LoggerFactory.getLogger(CommandAndConquerApplication.class);
-
 
     @Autowired
     CnCService cnCService;

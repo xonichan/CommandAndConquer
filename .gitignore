@@ -37,4 +37,5 @@ out/
 .vscode/
 
 ### Certificates ###
-**.p12
+*.p12
+*.log
